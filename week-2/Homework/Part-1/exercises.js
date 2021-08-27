@@ -15,16 +15,14 @@
  */
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
-
-  for(let i=0; i < arrayOfPeople.length; i++){
-    let h1Elem = document.createElement("h1");
-    h1Elem.textContent = arrayOfPeople[i].name;
-    content.appendChild(h1Elem);
-  
-    let h2Elem = document.createElement("h2");
-    h2Elem.textContent = arrayOfPeople[i].job;
-    content.appendChild(h2Elem);
-  }
+  arrayOfPeople.forEach(people => {
+    const h1 = document.createElement('h1');
+    const h2 = document.createElement('h2');
+    h1.innerText = people.name;
+    h2.innerText = people.job;
+    content.appendChild(h1)
+    content.appendChild(h2)
+  })
 }
 
 /**
@@ -37,15 +35,13 @@ function exerciseOne(arrayOfPeople) {
 function exerciseTwo(shopping) {
   //Write your code in here
   const content = document.querySelector("#content");
-  let ulElem = document.createElement("ul");
-  content.appendChild(ulElem);
-
-  for (let i=0; i < shopping.length; i++){
-    let listElem = document.createElement("li");
-    listElem.innerHTML = shopping[i];
-    ulElem.appendChild(listElem);
-  }
-
+  const uList = document.createElement('ul');
+  content.appendChild(uList);
+  shopping.forEach(shop => {
+    const list = document.createElement('li');
+    list.innerText = shop;
+    uList.appendChild(list);
+  })
 }
 
 /**
@@ -80,27 +76,30 @@ function exerciseTwo(shopping) {
 function exerciseThree(books) {
   //Write your code in here
   const booklist = document.createElement("ul");
- 
+
+
+
   books.forEach( book => { 
-    const bookItem = document.createElement("li");
-    const bookDetails = document.createElement("p");
-    const bookImg = document.createElement("img");
-    bookDetails.textContent = `${book.title} - ${book.author}`;
-    bookImg.setAttribute("src",book.imagesBooks);
-    bookImg.style.width = "200px";
+    const bookItemLi = document.createElement("li");
+    const bookDetailsP = document.createElement("p");
+    bookDetailsP.textContent = `${book.title} - ${book.author}`;
 
-    
-    
-    bookItem.appendChild(bookDetails);
-    booklist.appendChild(bookItem);
-    bookItem.appendChild(bookImg)
-    
-    
+    const bookImage = document.createElement("img"); //Declaro elemento imagen
+    bookImage.setAttribute("src",book.imageBook);
+    bookImage.style.width = "180px";
+
+    bookItemLi.appendChild(bookDetailsP);
+    bookItemLi.appendChild(bookImage);
+    booklist.appendChild(bookItemLi);
+
+    if (book.alreadyRead) { //Color a la lista de libros
+      bookItemLi.style.backgroundColor = "green";
+    } else {
+      bookItemLi.style.backgroundColor = "red";
+    };
   });
-
   document.body.appendChild(booklist);
-
-}
+};
 
 //
 //
