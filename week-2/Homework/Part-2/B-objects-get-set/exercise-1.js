@@ -10,3 +10,9 @@ var kitten = {
 
 // YOUR CODE HERE
 
+var kittenBrand = kitten.brand;
+var kittenIsFemale = kitten['isFemale'];
+
+
+console.log(kittenBrand);
+console.log(kittenIsFemale);

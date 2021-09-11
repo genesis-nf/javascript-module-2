@@ -16,7 +16,9 @@ let coffeeMachine = {
       flatWhite: 3.0,
     },
     insertedAmount: 0,
-    insertMoney: function (amount) {},
+    insertMoney: function (amount) {
+      this.insertedAmount = amount;
+    },
     getCoffee: function (coffee) {},
   };
   

@@ -11,3 +11,11 @@ const studentGrades = {
   // Prints
   // TOM - 20
   // ABDUL - 19
+
+  const gradesValues = Object.values(studentGrades);
+gradesValues.forEach((grade, i) => {
+    if (grade > 18) {
+        const studentName = Object.getOwnPropertyNames(studentGrades)[i];
+        console.log(`${studentName.toUpperCase()} - ${grade}`);
+    }
+  }); 

@@ -41,7 +41,7 @@ var athlete = {
     winNewMedal: function() {
         this.goldMedals = this.goldMedals + 1;
     }
-};
+}; 
 
 athlete.winNewMedal();
 console.log(athelete.goldMedals); // prints "26"

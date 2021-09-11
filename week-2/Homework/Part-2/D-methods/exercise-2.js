@@ -8,10 +8,13 @@ let person = {
     name: "Alice",
     age: 25,
     currentAddress: "Glasgow",
-    changeAddress: (newAddress) {
-        currentAddress = newAddress;
+    changeAddress: function (newAddress) {
+        this.currentAddress = this.newAddress;
     },
-    celebrateBirthday: function {
-        that.age = that.age + 1;
-    }
+    celebrateBirthday: function () {
+        this.age = this.age + 1;
+    },
 };
+
+console.log(person.changeAddress);
+console.log(person.celebrateBirthday);

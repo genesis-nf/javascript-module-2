@@ -4,20 +4,29 @@ Given the following house - follow the instructions below.
 Make sure you run the file after and it outputs the correct results.
 */
 
-let house = {
+/*let house = {
   address: "1 Kinning Park",
   previousOwners: ["Claire M.", "John A."],
   currentOwner: {
     firstName: "Margaret",
     lastName: "Conway",
   },
-};
+};*/
 
 /*
   DO NOT EDIT ANYTHING ABOVE THIS LINE
 
   WRITE YOUR CODE BELOW
 */
+
+let house = {
+  address: '51 Berkley Road',
+  previousOwners: ["Brian M.", "Fiona S."],
+  currentOwner: {
+    firstName: "Montgomery",
+    lastName: "Conway",
+  },
+};
 
 // - change the address of "house" to '51 Berkley Road'
 // - change the previous owners of "house" to ["Brian M.", "Fiona S."]

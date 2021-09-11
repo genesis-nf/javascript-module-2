@@ -20,10 +20,10 @@ let highScores = {
 
 // ONLY EDIT BELOW HERE
 
-let capitalCitiesKeys = ;
-let highScoresKeys = ;
-let capitalCitiesValues = ;
-let highScoresValues = ;
+let capitalCitiesKeys = Object.getOwnPropertyNames(capitalCities);
+let highScoresKeys = Object.getOwnPropertyNames(highScores);
+let capitalCitiesValues = Object.values(capitalCities);
+let highScoresValues = Object.values(highScores);
 
 // ONLY EDIT ABOVE HERE
 
